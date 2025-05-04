@@ -8,7 +8,8 @@ themeSelector.addEventListener('change', changeTheme);
         if (themeSelector.value === 'dark') {
             body.classList.add('dark');
             logo.src = 'byui-logo_white.png';
-        } else {
+        } 
+        else {
             body.classList.remove('dark');
             logo.src = 'byui-logo_blue.webp';
         }
