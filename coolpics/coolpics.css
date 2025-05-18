@@ -89,6 +89,37 @@ a:visited {
     color: var(--text-light);
 }
 
+.hide {
+  display: none;
+}
+
+dialog.viewer {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  border: none;
+  padding: 0;
+  z-index: 10;
+}
+
+dialog.viewer img {
+  display: block;
+  margin: 20vh auto 0 auto;
+  width: 90%;
+  max-height: 100%;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 20vh;
+  right: 5vw;
+  font-size: 2rem;
+  background: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 700px) {
 
 .gallery {
