@@ -1,0 +1,161 @@
+body {
+  font-family: sans-serif;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.credit-form {
+  display: grid;
+  gap: 4rem;
+  justify-items: end;
+  padding: 2rem;
+}
+
+.card-container {
+  position: relative;
+  width: 420px;
+  height: 260px;
+  display: grid;
+}
+
+.card-front {
+  position: absolute;
+  top: -30px;
+  left: -100px;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: grid;
+  gap: 0.75rem 1rem;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.card-image {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  margin-right: 0;
+  justify-self: end;
+  transform: translateX(-45px);
+}
+
+.card-number {
+  margin-left: 0;
+}
+
+.card-number input {
+  max-width: 100%;
+  width: calc(100% - 60px);
+  padding-left: 0.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-holder {
+  flex: 2;
+}
+
+.expiration {
+  flex: 1.5;
+}
+
+.expiration-fields {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.expiration-fields input {
+  width: 45px;
+}
+
+.card-back {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: #d6d6d6;
+  border-radius: 12px;
+  padding: 1rem 1.5rem 1rem 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0.75rem 1rem;
+  align-content: start;
+}
+
+.magnetic-strip {
+  background-color: #333;
+  height: 40px;
+  border-radius: 6px;
+  grid-column: 1 / span 3;
+  margin-bottom: 1rem;
+}
+
+.cvv {
+  grid-row: 2;
+  grid-column: 3;
+  justify-self: end;
+  align-self: start;
+  margin-top: 4rem;
+  width: 90px;
+  z-index: 3;
+}
+
+.cvv input {
+  width: 100%;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  background-color: #d6d6d6;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  justify-self: end;
+  margin-right: -40px;
+}
+
+button:hover {
+  background-color: #265ecf;
+}
