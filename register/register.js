@@ -1,5 +1,37 @@
+// 1. Global variables
 let participantCount = 1;
 
+// 2. DOM references
+const addButton = document.getElementById("add");
+const form = document.querySelector("form");
+
+// 3. Event listeners
+addButton.addEventListener("click", () => {
+  participantCount++;
+  const html = participantTemplate(participantCount);
+  addButton.insertAdjacentHTML("beforebegin", html);
+});
+
+form.addEventListener("submit", submitForm);
+
+// 4. Event handler functions
+function submitForm(event) {
+  event.preventDefault();
+
+  const adultName = document.getElementById("adult_name").value;
+  const total = totalFees();
+  const participants = document.querySelectorAll("[id^=fee]").length;
+
+  const summary = document.getElementById("summary");
+  form.style.display = "none";
+  summary.innerHTML = successTemplate({
+    name: adultName,
+    count: participants,
+    total: total
+  });
+}
+
+// 5. Helper functions
 function participantTemplate(count) {
   return `
     <section class="participant${count}">
@@ -40,30 +72,6 @@ function participantTemplate(count) {
       </div>
     </section>
   `;
-}
-
-const addButton = document.getElementById("add");
-
-addButton.addEventListener("click", () => {
-  participantCount++;
-  const html = participantTemplate(participantCount);
-  addButton.insertAdjacentHTML("beforebegin", html);
-});
-
-const form = document.querySelector("form");
-
-form.addEventListener("submit", submitForm);
-
-function submitForm(event) {
-  event.preventDefault();
-
-  const adultName = document.getElementById("adult_name").value;
-  const total = totalFees();
-  const participants = document.querySelectorAll("[id^=fee]").length;
-
-  const summary = document.getElementById("summary");
-  form.style.display = "none";
-  summary.innerHTML = successTemplate({ name: adultName, count: participants, total: total });
 }
 
 function totalFees() {
