@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A collection of delicious recipes with photos and ratings." />
+  <meta name="author" content="Your Name" />
+  <meta property="og:title" content="Recipe Book" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="A collection of delicious recipes with photos and ratings." />
+  <meta property="og:image" content="images/apple-crisp.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="recipes.css" />
+  <link rel="icon" href="images/recipe-book.png" />
+  <title>Recipe Book</title>
+</head>
+<body>
+  <header>
+    <img src="images/recipe-book.png" alt="Recipe Book logo" />
+    <h1>RecipeBook</h1>
+  </header>
+
+  <main>
+    <form class="search">
+      <input id="search" type="text" placeholder="Find a recipe" />
+      <button type="submit">🔍</button>
+    </form>
+
+    <hr />
+
+    <section class="content" id="recipe-container">
+      <!-- JavaScript will inject recipe cards here -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon" /></a>
+      <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" /></a>
+      <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon" /></a>
+    </div>
+    <p style="font-size: 0.6em;">
+      <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">
+        Recipe icons created by Freepik - Flaticon
+      </a>
+    </p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 1em 0;
+}
+
+header img {
+  height: 50px;
+  vertical-align: middle;
+}
+
+header h1 {
+  display: inline-block;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2.5rem;
+  margin: 0;
+  vertical-align: middle;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+form.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+form.search input[type="text"] {
+  flex: 1;
+  border: none;
+  padding: 0.8em;
+  font-size: 1em;
+}
+
+form.search button {
+  background: white;
+  border: none;
+  padding: 0.8em;
+  cursor: pointer;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1.5em 0;
+  width: 100%;
+}
+
+.recipe-card {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1em;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.tags {
+  margin-top: 0.5em;
+  text-align: left;
+}
+
+.tags span {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.3em 0.8em;
+  font-size: 1em;
+}
+
+.recipe-card h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  margin: 0.5em 0 0.3em;
+  text-align: left;
+  color: #007BFF;
+}
+
+.rating {
+  display: inline-block;
+  font-size: 1.5em;
+  color: gold;
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+.description {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 0.5em;
+}
+
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 0.8em;
+}
+
+footer a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+footer .social {
+  margin-top: 1em;
+}
+
+footer .social a img {
+  width: 32px;
+  margin: 0 0.5em;
+}
+/* Hide description on small screens */
+.description {
+  display: none;
+}
+
+/* Show description on wider screens (>=600px) */
+@media (min-width: 600px) {
+  .description {
+    display: block;
+  }
+}
+
+/* === Responsive Layouts === */
+
+@media (min-width: 600px) {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+  }
+
+  main,
+  .search,
+  hr,
+  footer {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
