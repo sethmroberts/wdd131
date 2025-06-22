@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-
 * {
   box-sizing: border-box;
 }
@@ -128,7 +126,6 @@ hr {
   display: none;
 }
 
-/* Footer Layout */
 footer {
   font-size: 0.8em;
   padding: 2em 1em;
@@ -176,7 +173,6 @@ footer .social a img {
   display: block;
 }
 
-/* Show description on wider screens (>=600px) */
 @media (min-width: 600px) {
   .description {
     display: block;
@@ -190,7 +186,6 @@ footer .social a img {
   }
 }
 
-/* Optional: Stack footer items on small screens */
 @media (max-width: 600px) {
   .footer-row {
     flex-direction: column;
