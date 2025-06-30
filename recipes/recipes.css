@@ -126,6 +126,61 @@ hr {
   display: none;
 }
 
+.recipe {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.recipe img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.recipe__tags {
+  margin-top: 0.5em;
+  padding-left: 1em;
+  text-align: left;
+}
+
+.recipe__tags li {
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.3em 0.8em;
+  font-size: 1em;
+  margin-right: 0.5em;
+}
+
+.recipe h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  margin: 0.5em 0 0.3em;
+  text-align: left;
+  color: #007BFF;
+}
+
+.recipe__ratings {
+  display: inline-block;
+  font-size: 1.3em;
+  color: gold;
+  margin-bottom: 0.5em;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.recipe__description {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 0.5em;
+}
+
 footer {
   font-size: 0.8em;
   padding: 2em 1em;
