@@ -20,24 +20,27 @@
 			<h2>Overview</h2>
 			<h3>Purpose</h3>
 			<p>
-			This site is a personal photo blog that blends visual storytelling with short reflections. It’s meant to be a creative space where I can explore ideas, share meaningful moments, and practice combining photography with writing in a clean, focused format.
+			This site is a personal photo blog that blends visual storytelling with short reflections. It's meant to be a creative space where I can explore ideas, share meaningful moments, and practice combining photography with writing in a clean, focused format.
 			</p>
 
 			<h3>Audience</h3>
 			<p>
-			The intended audience includes friends, creatives, and anyone who enjoys photography, visual journaling, or reflective short-form content. It’s also useful as a casual portfolio for future employers or collaborators who want to see my creative voice and style.
+			The intended audience includes friends, creatives, and anyone who enjoys photography, visual journaling, or reflective short-form content. It's also useful as a casual portfolio for future employers or collaborators who want to see my creative voice and style.
 			</p>
 
 			<h3>Dynamic elements</h3>
 			<p>
-			The homepage uses JavaScript to dynamically generate photo post cards from an array of data. Each post includes an image, title, short reflection, and a list of tags (e.g., “sunset”, “quiet”, “Idaho”). Users can filter the posts by clicking on tag buttons, which updates the display to show only the matching posts. This demonstrates DOM interaction, conditional rendering, and array filtering. Some posts may also include a "Read More" button that links to a full story subpage.
+			The homepage dynamically generates photo blog post cards from an array of objects using JavaScript. Each post includes tags, and a “Filter by Tag” section lets users click a tag to filter posts. This uses DOM manipulation, event listeners, and array filtering logic.
+
+			On the subpage, the page dynamically selects a random tag from the current post and displays four other photo cards that share that tag (if available). This highlights related content without requiring user input and demonstrates conditional logic, randomization, and filtered array rendering.
 			</p>
+
 
 			<hr />
 			<h2>Branding</h2>
 			<h3>Website Logo</h3>
 			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
-			<img src="#" alt="Logo image" />
+			<img src="images/logo.png" alt="Logo image" width=150px />
 			<hr />
 			<h2>Style Guide</h2>
 
@@ -122,7 +125,14 @@
 			<img src="images/landing.JPG" alt="sunset field" style="max-width: 300px;"><br />
 			<strong>Hero Subtitle:</strong> A quiet blog of photos and small reflections.
 			</p>
-
+			<section class="intro-text">
+			<p>
+				I like photography because it feels like a puzzle — finding the shots that actually make me feel something. This site is just a quieter space to share some of those moments.
+			</p>
+			<p>
+				Most social media feels too loud, too fast. I wanted a corner of the internet that isn’t about chasing likes — just a place to put the things I’ve made. I believe in sharing what you create, even if it’s simple.
+			</p>
+			</section>
 			<p>Blog Posts:</p>
 			<ul>
 			<li>
@@ -151,14 +161,14 @@
 				[Any additional details about home that the wireframe does not make
 				clear]
 			</p>
-			<img src="#" alt="home page wireframe" />
+			<img src="images/main-page-wireframe.jpeg" alt="home page wireframe" width="300px" />
 
 			<h3>[Page 2]</h3>
 			<p>
 				[Any additional details about page 2 that the wireframe does not make
 				clear]
 			</p>
-			<img src="#" alt="page 2 wireframe" />
+			<img src="images/subpage-wireframe.jpeg" alt="page 2 wireframe" width="300px" />
 		</main>
 	</body>
 </html>
