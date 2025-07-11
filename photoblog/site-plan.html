@@ -1,166 +1,205 @@
-
 <!DOCTYPE html>
 <html lang="en-us">
-	<head>
-		<meta charset="utf-8" />
-		<title>Site Plan</title>
-		<link type="text/css" rel="stylesheet" href="site-plan.css" />
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <title>Site Plan</title>
+    <link type="text/css" rel="stylesheet" href="site-plan.css" />
+  </head>
 
-	<body>
-		<header>
-			<h1>Photoblog Site Plan</h1>
-			<h2>Seth Roberts</h2>
-			<h2>WDD 131-3</h2>
-			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
-		</header>
-		<main>
-			<!-- ------------------------Steps 2-3------------------------------ -->
-			<hr />
-			<h2>Overview</h2>
-			<h3>Purpose</h3>
-			<p>
-			This site is a personal photo blog that blends visual storytelling with short reflections. It's meant to be a creative space where I can explore ideas, share meaningful moments, and practice combining photography with writing in a clean, focused format.
-			</p>
+  <body>
+    <header>
+      <h1>Photoblog Site Plan</h1>
+      <h2>Seth Roberts</h2>
+      <h2>WDD 131-3</h2>
+    </header>
+    <main>
+      <hr />
+      <h2>Overview</h2>
+      <h3>Purpose</h3>
+      <p>
+        This site is a personal photo blog that blends visual storytelling with
+        short reflections. It's meant to be a creative space where I can explore
+        ideas, share meaningful moments, and practice combining photography with
+        writing in a clean, focused format.
+      </p>
 
-			<h3>Audience</h3>
-			<p>
-			The intended audience includes friends, creatives, and anyone who enjoys photography, visual journaling, or reflective short-form content. It's also useful as a casual portfolio for future employers or collaborators who want to see my creative voice and style.
-			</p>
+      <h3>Audience</h3>
+      <p>
+        The intended audience includes friends, creatives, and anyone who enjoys
+        photography, visual journaling, or reflective short-form content. It's
+        also useful as a casual portfolio for future employers or collaborators
+        who want to see my creative voice and style.
+      </p>
 
-			<h3>Dynamic elements</h3>
-			<p>
-			The homepage dynamically generates photo blog post cards from an array of objects using JavaScript. Each post includes tags, and a “Filter by Tag” section lets users click a tag to filter posts. This uses DOM manipulation, event listeners, and array filtering logic.
+      <h3>Dynamic elements</h3>
+      <p>
+        The homepage dynamically generates photo blog post cards from an array of
+        objects using JavaScript. Each post includes tags, and a “Filter by Tag”
+        section lets users click a tag to filter posts. This uses DOM
+        manipulation, event listeners, and array filtering logic.
 
-			On the subpage, the page dynamically selects a random tag from the current post and displays four other photo cards that share that tag (if available). This highlights related content without requiring user input and demonstrates conditional logic, randomization, and filtered array rendering.
-			</p>
+        On the subpage, the page dynamically selects a random tag from the current
+        post and displays four other photo cards that share that tag (if
+        available). This highlights related content without requiring user input
+        and demonstrates conditional logic, randomization, and filtered array
+        rendering.
+      </p>
 
+      <hr />
+      <h2>Branding</h2>
+      <h3>Website Logo</h3>
+      <img src="images/logo.png" alt="Logo image" width="150px" />
+      <hr />
+      <h2>Style Guide</h2>
 
-			<hr />
-			<h2>Branding</h2>
-			<h3>Website Logo</h3>
-			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
-			<img src="images/logo.png" alt="Logo image" width=150px />
-			<hr />
-			<h2>Style Guide</h2>
+      <h3>Color Palette</h3>
+      Palette URL:
+      <a
+        href="https://coolors.co/a41623-ffb563-ffd29d-918450"
+        target="_blank"
+        >https://coolors.co/a41623-ffb563-ffd29d-918450</a
+      >
 
-			<!-- ------------------------Steps 4-8------------------------------ -->
+      <table class="colors">
+        <tbody>
+          <tr>
+            <th>Primary</th>
+            <th>Secondary</th>
+            <th>Accent 1</th>
+            <th>Accent 2</th>
+          </tr>
+          <tr>
+            <td class="primary">[#396E94]</td>
+            <td class="secondary">[#E7C24F]</td>
+            <td class="accent1">[#A43312]</td>
+            <td class="accent2"></td>
+          </tr>
+        </tbody>
+      </table>
 
-			<h3>Color Palette</h3>
-			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+      <h3>Typography</h3>
+      <h4>Heading Font: Nunito Sans</h4>
+      <h4>Paragraph Font: Nunito</h4>
 
-			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
-			Palette URL:
-			<a
-				href="https://coolors.co/a41623-ffb563-ffd29d-918450"
-				target="_blank"
-				>https://coolors.co/a41623-ffb563-ffd29d-918450</a
-			>
+      <h3>Normal paragraph example</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua...
+      </p>
+      <h3>Colored paragraph example</h3>
+      <p class="colored">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua...
+      </p>
 
-			<table class="colors">
-				<tbody>
-					<tr>
-						<th>Primary</th>
-						<th>Secondary</th>
-						<th>Accent 1</th>
-						<th>Accent 2</th>
-					</tr>
-					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
-					<tr>
-						<td class="primary">[#396E94]</td>
-						<td class="secondary">[#E7C24F]</td>
-						<td class="accent1">[#A43312]</td>
-						<td class="accent2"></td>
-					</tr>
-				</tbody>
-			</table>
+      <h3>Navigation</h3>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Page2</a>
+        <a href="#">Page3</a>
+      </nav>
+      <hr />
 
-			<!-- ------------------------Step 9------------------------------ -->
+      <h2>Content</h2>
 
-			<h3>Typography</h3>
-			<!-- Choose a font for your paragraphs (body copy) and headlines. What font(s) have you chosen? Why did you choose what you did?  Make sure to review the list of web safe fonts at W3Schools.org as a starting point.  Think also about which of your colors above you might use for background and font colors. -->
+      <h3>Home page</h3>
+      <p>
+        <strong>Hero Title:</strong> Still Stories<br />
+        <img
+          src="images/landing.JPG"
+          alt="sunset field"
+          style="max-width: 300px"
+        /><br />
+        <strong>Hero Subtitle:</strong> A quiet blog of photos and small
+        reflections.
+      </p>
+      <section class="intro-text">
+        <p>
+          I like photography because it feels like a puzzle — finding the shots
+          that actually make me feel something. This site is just a quieter
+          space to share some of those moments.
+        </p>
+        <p>
+          Most social media feels too loud, too fast. I wanted a corner of the
+          internet that isn’t about chasing likes — just a place to put the
+          things I’ve made. I believe in sharing what you create, even if it’s
+          simple.
+        </p>
+      </section>
 
-			<h4>
-				Heading Font: Nunito Sans
-				<!-- change this -->
-			</h4>
-			<h4>
-				Paragraph Font: Nunito
-				<!-- change this -->
-			</h4>
-			<h3>Normal paragraph example</h3>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-				velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-				occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-				mollit anim id est laborum.
-			</p>
-			<h3>Colored paragraph example</h3>
-			<p class="colored">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-				veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-				commodo consequat.
-			</p>
+      <p>Blog Posts:</p>
+      <ul>
+        <li>
+          <strong>Wind in the Quiet</strong><br />
+          <img
+            src="images/sunset-field.jpeg"
+            alt="sunset field"
+            style="max-width: 300px"
+          /><br />
+          <em>Preview Text:</em> Somewhere between towns I started noticing how
+          good Idaho looks.<br />
+          <em>Description:</em>
+          I had pulled over on some backroad between towns, mostly because I
+          couldn’t ignore how the light was landing on the fields. It wasn’t a
+          planned stop—I just saw this patch of grass swaying and something in
+          me said <em>wait</em>. The wind was doing its own choreography,
+          brushing through the tall stems like it had somewhere to be, and I
+          crouched down without even thinking. I remember how quiet it was out
+          there. No traffic, no people—just the breeze, the sky, and this soft
+          hum of evening light. I didn't have a tripod, so I braced my elbows on
+          my knees and held my breath, hoping the shutter would catch what I was
+          feeling.<br />
+          <em>Camera Info:</em> 26mm, f/1.6, 1/250 sec, ISO 125<br />
+          <em>Tags:</em>
+          <code>sunset</code>, <code>Idaho</code>, <code>open space</code>
+        </li>
+        <br />
+        <li>
+          <strong>Stillness That Speaks</strong><br />
+          <img
+            src="images/sunset-lake.JPG"
+            alt="sunset lake"
+            style="max-width: 300px"
+          /><br />
+          <em>Preview Text:</em> We missed the best light, but this one ended up
+          being my favorite.<br />
+          <em>Description:</em>
+          We got there later than we meant to. The sun had already dipped behind
+          the mountains, and most of the light was gone—but somehow that made it
+          better. The lake had turned into a sheet of colored glass, reflecting
+          the last whispers of sunset in pink and blue. I stepped away from the
+          others and stood alone near the reeds, the air colder than I expected.
+          I only had a few minutes to take the shot before everything dimmed
+          completely. It wasn’t dramatic or flashy—just still. The kind of still
+          that feels like it’s saying something. I took a few frames, adjusted
+          the focus by hand, and then just stood there a while longer, listening
+          to nothing.<br />
+          <em>Camera Info:</em> 50mm, f/2, 1/250 sec, ISO 100<br />
+          <em>Tags:</em>
+          <code>lake</code>, <code>sunset</code>, <code>quiet</code>,
+          <code>after hours</code>
+        </li>
+      </ul>
 
-			<!-- ------------------------Step 10------------------------------ -->
+      <h2>Wireframes</h2>
+      <p>
+        Create two wireframes for your site. One for each page and list them
+        here
+      </p>
 
-			<h3>Navigation</h3>
-			<!-- Think about how you want your navigation bar to look. In the site-plan.css file change the colors to your colors to get the look you desire. -->
-			<nav>
-				<a href="#">Home</a>
-				<a href="#">Page2</a>
-				<a href="#">Page3</a>
-			</nav>
-			<hr />
+      <h3>Home</h3>
+      <img
+        src="images/main-page-wireframe.jpeg"
+        alt="home page wireframe"
+        width="300px"
+      />
 
-			<h2>Content</h2>
-
-			<h3>Home page</h3>
-			<p>
-			<strong>Hero Title:</strong> Still Stories<br />
-			<img src="images/landing.JPG" alt="sunset field" style="max-width: 300px;"><br />
-			<strong>Hero Subtitle:</strong> A quiet blog of photos and small reflections.
-			</p>
-			<section class="intro-text">
-			<p>
-				I like photography because it feels like a puzzle — finding the shots that actually make me feel something. This site is just a quieter space to share some of those moments.
-			</p>
-			<p>
-				Most social media feels too loud, too fast. I wanted a corner of the internet that isn’t about chasing likes — just a place to put the things I’ve made. I believe in sharing what you create, even if it’s simple.
-			</p>
-			</section>
-			<p>Blog Posts:</p>
-			<ul>
-			<li>
-				<strong>Wind in the Quiet</strong><br />
-				<img src="images/sunset-field.jpeg" alt="sunset field" style="max-width: 300px;"><br />
-				<em>Preview Text:</em> Somewhere between towns I started noticing how good Idaho looks.<br />
-				<em>Tags:</em> <code>sunset</code>, <code>Idaho</code>, <code>open space</code>
-			</li>
-			<br />
-			<li>
-				<strong>Stillness That Speaks</strong><br />
-				<img src="images/sunset-lake.JPG" alt="sunset lake" style="max-width: 300px;"><br />
-				<em>Preview Text:</em> We missed the best light, but this one ended up being my favorite.<br />
-				<em>Tags:</em> <code>lake</code>, <code>sunset</code>, <code>quiet</code>, <code>after hours</code>
-			</li>
-			</ul>
-			
-			<h2>Wireframes</h2>
-			<p>
-				Create two wireframes for your site. One for each page and list them
-				here
-			</p>
-
-			<h3>Home</h3>
-			<img src="images/main-page-wireframe.jpeg" alt="home page wireframe" width="300px" />
-
-			<h3>[Page 2]</h3>
-			<img src="images/subpage-wireframe.jpeg" alt="page 2 wireframe" width="300px" />
-		</main>
-	</body>
+      <h3>[Page 2]</h3>
+      <img
+        src="images/subpage-wireframe.jpeg"
+        alt="page 2 wireframe"
+        width="300px"
+      />
+    </main>
+  </body>
 </html>
