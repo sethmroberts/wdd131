@@ -56,7 +56,7 @@ export const imageData = [
   {
     id: "daisies",
     title: "Daisies",
-    image: "images/daisies.jpeg",
+    image: "images/daisies.jpg",
     preview: "These flowers weren't part of the plan, but they stopped me anyway.",
     description: "I was driving past a small dirt path when I caught a glimpse of something white and yellow in the grass. I reversed, pulled off, and found a quiet patch of wild daisies. There was nothing dramatic about the scene—just flowers doing what they do—but there was something kind about it. I laid in the grass for a minute, letting the wind push them around, and snapped a few shots from low to the ground. It reminded me how much beauty is waiting when you slow down enough to notice it.",
     camera: "50mm, f/2.2, 1/320 sec, ISO 100",
