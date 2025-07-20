@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --primary-color: #918450;
+  --secondary-color: #F5E4C3;
+  --accent1-color: #A41623;
+  --accent2-color: white;
+  --text-color: #333;
+
+  --heading-font: "Nunito Sans", sans-serif;
+  --paragraph-font: "Nunito", Helvetica, sans-serif;
+}
+
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--paragraph-font);
+  line-height: 1.6;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.back-link {
+  font-family: var(--paragraph-font);
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  color: var(--accent1-color);
+}
+
+.logo {
+  width: 40px;
+}
+
+/* Main Layout */
+main {
+  padding: 1rem;
+}
+
+.post-content {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.image-title {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  margin: 2rem auto 2rem auto;
+  text-align: center;
+  width: 100%;
+}
+
+
+/* Image and Details Side-by-Side */
+.image-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: nowrap;
+}
+
+.main-image {
+  flex: 1 1 40%;
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.image-details {
+  flex: 1;
+  min-width: 250px;
+  font-size: 1rem;
+}
+
+.image-details p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.detail-label {
+  font-weight: bold;
+  font-family: var(--heading-font);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Related Images Section */
+.related-images {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.related-images h2 {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent2-color);
+}
+
+.thumbnail-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.thumbnail {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  background-color: var(--primary-color);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.thumb-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--accent2-color);
+  font-size: 0.75rem;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: var(--heading-font);
+}
+
+footer {
+  background-color: var(--primary-color);
+  padding: 1rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--accent2-color);
+  padding: 0 1rem;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .image-layout {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .main-image,
+  .image-details {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnail {
+    width: 100px;
+    height: 100px;
+  }
+
+  .thumb-title {
+    font-size: 0.65rem;
+  }
+}

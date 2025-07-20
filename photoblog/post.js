@@ -1,42 +1,69 @@
 import { imageData } from './imagedata.js';
 
-// Get query parameter
-const params = new URLSearchParams(window.location.search);
-const id = params.get('id');
+// Extract the string ID from the URL
+function getPostIdFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('id');
+}
 
-const container = document.getElementById('post-container');
+// Populate the main post content
+function displayPost(post) {
+  document.getElementById('post-title').textContent = post.title;
 
-// Find image by ID
-const image = imageData.find(img => img.id === id);
+  const img = document.getElementById('post-image');
+  img.src = post.image;
+  img.alt = post.alt || post.title;
 
-if (image) {
-  container.innerHTML = `
-    <h2>${image.title}</h2>
-    <img src="${image.image}" alt="${image.title}" style="max-width: 600px"><br />
-    <p><em>${image.preview}</em></p>
-    <p>${image.description}</p>
-    <p><strong>Camera Info:</strong> ${image.camera}</p>
-    <p><strong>Tags:</strong> ${image.tags.map(tag => `<code>${tag}</code>`).join(', ')}</p>
-    <hr />
-    <h3>Related Posts:</h3>
-    <ul id="related-posts"></ul>
-  `;
+  document.getElementById('post-preview').textContent = post.preview;
+  document.getElementById('post-description').textContent = post.description;
+  document.getElementById('post-camera').textContent = `Camera Info: ${post.camera}`;
+}
 
-  // Show related items with one shared tag
-  const relatedTag = image.tags[Math.floor(Math.random() * image.tags.length)];
-  const related = imageData.filter(img => img.id !== id && img.tags.includes(relatedTag)).slice(0, 4);
+// Populate related images based on matching tags
+function displayRelated(post) {
+  const container = document.getElementById('related-thumbnails');
+  const sectionHeading = document.querySelector('.related-images h2');
+  container.innerHTML = '';
 
-  const relatedList = document.getElementById('related-posts');
-  related.forEach(item => {
-    const li = document.createElement('li');
-    li.innerHTML = `
-      <a href="post.html?id=${item.id}">
-        <img src="${item.image}" alt="${item.title}" style="max-width: 150px"><br />
-        ${item.title}
-      </a>
+  // Pick a random tag from the current post
+  const randomTag = post.tags[Math.floor(Math.random() * post.tags.length)];
+
+  // Update the heading
+  sectionHeading.textContent = `Other Images Tagged "${randomTag}"`;
+
+  // Filter other images that include the same tag
+  const matchingPosts = imageData.filter(
+    img => img.id !== post.id && img.tags.includes(randomTag)
+  );
+
+  // Show a message if no matches
+  if (matchingPosts.length === 0) {
+    container.innerHTML = '<p>No other images with this tag.</p>';
+    return;
+  }
+
+  // Create and append thumbnails
+  matchingPosts.forEach(img => {
+    const thumb = document.createElement('a');
+    thumb.href = `post.html?id=${img.id}`;
+    thumb.classList.add('thumbnail');
+
+    thumb.innerHTML = `
+      <img src="${img.image}" alt="${img.title}" />
+      <p class="thumb-title">${img.title}</p>
     `;
-    relatedList.appendChild(li);
+
+    container.appendChild(thumb);
   });
+}
+
+// Main logic
+const postId = getPostIdFromURL();
+const post = imageData.find((img) => img.id === postId);
+
+if (post) {
+  displayPost(post);
+  displayRelated(post);
 } else {
-  container.textContent = 'Post not found.';
+  document.querySelector('.post-content').innerHTML = '<p>Post not found.</p>';
 }

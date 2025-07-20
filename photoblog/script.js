@@ -24,18 +24,22 @@ function filterByTag(tag) {
   renderImages(filtered);
 }
 
-// Card builder
 function renderImages(images) {
   gallery.innerHTML = '';
   images.forEach(item => {
     const li = document.createElement('li');
+    li.classList.add('card');
 
     li.innerHTML = `
-      <strong>${item.title}</strong><br />
-      <img src="${item.image}" alt="${item.title}" style="max-width: 300px"><br />
-      <em>Preview Text:</em> ${item.preview}<br />
-      <a href="post.html?id=${item.id}">See More</a><br />
-      <em>Tags:</em> ${item.tags.map(t => `<code>${t}</code>`).join(', ')}
+      <div class="card-inner">
+        <img src="${item.image}" alt="${item.title}" />
+        <div class="card-content">
+          <h3>${item.title}</h3>
+          <p>${item.preview}</p>
+          <a href="post.html?id=${item.id}">See More</a>
+          <p><strong>Tags:</strong> ${item.tags.map(t => `<code>${t}</code>`).join(', ')}</p>
+        </div>
+      </div>
     `;
 
     gallery.appendChild(li);

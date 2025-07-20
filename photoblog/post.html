@@ -4,25 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Post</title>
-  <link rel="stylesheet" href="style.css" />
-  <div id="post-container"></div>
+  <link rel="stylesheet" href="post.css" />
   <script type="module" src="post.js"></script>
-
 </head>
 <body>
   <header>
-    <h1>Photo Journal</h1>
-    <a href="index.html">← Back to Home</a>
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <img src="images/logo.png" alt="Logo" class="logo" />
   </header>
 
-  <main id="post-detail">
-    <!-- Full post info here -->
+  <main class="post-content">
+    <h1 id="post-title" class="image-title"></h1>
+
+    <div class="post-top">
+      <div class="image-layout">
+        <img id="post-image" src="" alt="" class="main-image" />
+
+        <div class="image-details">
+          <div>
+            <span class="detail-label">Preview:</span>
+            <p id="post-preview" class="preview"></p>
+          </div>
+          <div>
+            <span class="detail-label">Reflection:</span>
+            <p id="post-description" class="description"></p>
+          </div>
+          <div>
+            <span class="detail-label">Camera Settings:</span>
+            <p id="post-camera" class="settings"></p>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
+  <section class="related-images">
+    <h2>Other Images Tagged</h2>
+    <div id="related-thumbnails" class="thumbnail-row">
+      <!-- dynamically inserted -->
+    </div>
+  </section>
 
-  <script type="module" src="post.js"></script>
+  <script type="module" src="script.js"></script>
+    <footer>
+    <div class="footer-content">
+        <span>&copy; 2025</span>
+        <span>Seth Roberts</span>
+    </div>
+    </footer>
 </body>
 </html>

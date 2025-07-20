@@ -3,26 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Photo Journal</title>
+  <title>Still Stories</title>
   <link rel="stylesheet" href="style.css" />
-  <ul id="image-gallery"></ul>
-    <div id="tag-filters"></div>
-    <script type="module" src="script.js"></script>
-
+  <script type="module" src="script.js"></script>
 </head>
+
 <body>
-  <header>
-    <h1>Photo Journal</h1>
+  <header class="hero">
+    <img src="images/landing.JPG" alt="sunset field" class="hero-image" />
+    <div class="hero-text">
+      <h1>Still Stories</h1>
+      <p class="subtitle">A quiet blog of photos and small reflections.</p>
+    </div>
+    <div class="logo">
+      <img src="images/logo.png" alt="Site logo" />
+    </div>
   </header>
 
-  <main id="post-container">
-    <!-- Cards are here -->
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Your Name</p>
-  </footer>
-
-  <script type="module" src="script.js"></script>
+  <section class="intro-text">
+    <h2>My Quiet Blog</h2>
+    <p>
+      I like photography because it feels like a puzzle — finding the shots
+      that actually make me feel something. This site is just a quieter
+      space to share some of those moments.
+    </p>
+    <p>
+      Most social media feels too loud, too fast. I wanted a corner of the
+      internet that isn't about chasing likes — just a place to put the
+      things I've made. I believe in sharing what you create, even if it's
+      simple.
+    </p>
+<section class="gallery-section">
+  <h2>Recent Moments</h2>
+  <div id="tag-filters" class="tags"></div>
+  <ul id="image-gallery" class="gallery"></ul>
+</section>
+    <footer>
+    <div class="footer-content">
+        <span>&copy; 2025</span>
+        <span>Seth Roberts</span>
+    </div>
+    </footer>
 </body>
 </html>
