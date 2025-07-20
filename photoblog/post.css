@@ -28,6 +28,8 @@ body {
 
 /* Header */
 header {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
